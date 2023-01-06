@@ -26,8 +26,10 @@
     "@testing-library/jest-dom": "5.16.2",
     "@testing-library/react": "12.1.2",
     "@testing-library/user-event": "13.5.0",
+    "axios": "^1.2.2",
     "chart.js": "3.4.1",
     "chroma-js": "2.4.2",
+    "md5": "^2.3.0",
     "prop-types": "15.8.1",
     "react": "17.0.2",
     "react-chartjs-2": "3.0.4",
@@ -38,6 +40,7 @@
     "react-table": "7.7.0",
     "stylis": "4.0.13",
     "stylis-plugin-rtl": "2.1.1",
+    "universal-cookie": "^4.0.4",
     "web-vitals": "2.1.4",
     "yup": "0.32.11"
   },
@@ -47,7 +50,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start",
-    "inicio":"json-server --watch database.json --port 3001"
+    "inicio": "json-server --watch database.json --port 3001"
   },
   "eslintConfig": {
     "extends": [

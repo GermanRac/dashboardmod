@@ -41,7 +41,17 @@ import BasicLayout from "layouts/authentication/components/BasicLayout";
 // Images
 import bgImage from "assets/images/bg-sign-in-basic.jpeg";
 
-// import * as actions from '../actions/actionsLogin';
+import React, { Component } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import axios from "axios";
+import md5 from "md5";
+import Cookies from "universal-cookie";
+
+const baseUrl="http://localhost:3000/usuarios";
+const cookies = new Cookies();
+
+
+import actionsLogin from "../actions/actionsLogin";
 
 function Basic() {
   const [rememberMe, setRememberMe] = useState(false);
@@ -104,7 +114,15 @@ function Basic() {
               </MDTypography>
             </MDBox>
             <MDBox mt={4} mb={1}>
-              <MDButton variant="gradient" color="info" fullWidth>
+              <MDButton
+                variant="gradient"
+                color="info"
+                fullWidth
+                onClick={() => {
+                  // alert("htlm");
+                  iniciarSesion();
+                }}
+              >
                 sign in
               </MDButton>
             </MDBox>
